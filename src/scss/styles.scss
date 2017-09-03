@@ -1,0 +1,15 @@
+@import "reset";
+@import "variables";
+@import "responsive-utils";
+@import "html-tags";
+@import "footer";
+
+
+// components
+@import "components/header";
+@import "components/articles-list";
+@import "components/author-info";
+@import "components/article-body";
+@import "components/article-comments";
+@import "components/pagination";
+@import "components/article-form";

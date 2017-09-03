@@ -1,0 +1,80 @@
+.header-container {
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: fixed;
+    background: $color-base;
+    z-index: 1;
+    .header {
+        max-width: $web-container-size;
+        margin: 0 auto;
+        // Logo
+        .header__logo-container {
+            padding: 5px 0 0 5px;
+            width: 50%;
+            float: left;
+        }
+        // Actions bar
+        .header__actions-bar {
+            font-size: $font-size-base;
+            overflow: auto;
+            line-height: 30px;
+            color: $actions-color;
+            padding: 4px 10px 0 0;
+            .action {
+                float: left;
+            }
+            .header__log-actions {
+                width: calc(100% - 30px);
+                padding-left: calc(100% - 130px); 
+                .header__actions-bar-login {
+                    width: 42px;
+                    text-align: center;
+                }
+                .header__actions-bar-register {
+                    width: 50px;
+                    text-align: center;
+                    padding-left: 3px;
+                }
+            } 
+            .header__actions-bar-search {
+                float: right;
+                color: $font-secondary-color;
+                .material-icons--search {
+                    float: right;
+                } 
+            }
+        }
+        // Navigation menu
+        .header__nav-container  {
+            width:  100%;
+            overflow: hidden;
+            height: 40px;
+            background: $font-size-base;
+            .header__nav-menu {
+                list-style-type: none;  
+                height: 100px;
+                white-space: nowrap;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                        &> li {
+                            display:inline-block;
+                            height: 40px;
+                        }
+                        .header__nav-link {
+                            text-decoration: none;
+                            color: $font-secondary-color;
+                            padding: 4px;
+                            line-height: 40px;
+                            &:hover {
+                                background:transparentize($font-secondary-color, .3);
+                            }
+                            @include if-desktop {
+                                padding: 8px;
+                            }
+                        }
+            }
+        }
+
+    }
+}

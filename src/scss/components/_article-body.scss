@@ -1,0 +1,25 @@
+.article-container {
+    margin: 0 auto;
+    padding-top: 75px;
+}
+.article-page__text {
+    max-width: $web-container-size;
+    margin: 0 auto;
+    p {
+        padding: 0 20px 22px;
+    }
+    .article-page__img-container {
+        margin-bottom: 20px;
+        img {
+        margin: 0 auto;
+        }
+    }
+    .article-title {
+        font-size: $font-size-h1;
+        text-align: center;
+        margin: 30px;
+        line-height: 32px;
+        font-family: $title-font-family;
+        font-weight: bold;
+    } 
+}

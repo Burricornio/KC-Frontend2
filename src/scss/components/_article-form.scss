@@ -1,0 +1,44 @@
+.form-container {
+    background: transparentize($font-secondary-color, .3);
+    margin: 0 auto;
+    @include if-tablet-landscape {
+        padding-top: 20px;
+    }
+    .comment-form {
+        max-width: $web-container-size;
+        .ui-status {
+            &.error, &.loading {
+                background: $alert-color;
+                text-align: center;
+                padding: 20px;
+                border-radius: 3px;
+                color: $color-base;
+                display: none;
+                @include if-tablet-landscape {
+                    margin: 0 20px;
+                }
+            }
+            &.ideal {
+                padding: 10px 20px;
+                #contador {
+                    float: right;
+                    span {
+                        color: $actions-color;
+                    }
+                }
+            }
+        }
+        &.error {
+            .ui-status.error {display: block;}
+        }
+        &.loading {
+            .ui-status.loading {display: block;}
+        }
+    }
+    @include if-tablet-landscape {
+        .comment-form {
+            width:  70%;
+            margin: 0 auto;
+        }
+    }
+}

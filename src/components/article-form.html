@@ -1,0 +1,30 @@
+<div class="form-container">
+
+    <form action="" class="comment-form" novalidate>
+
+        <div class="ui-status error"></div>
+
+        <div class="ui-status loading">Guardando el comentario...</div>
+
+        <div class="ui-status ideal">
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" data-id= "NOMBRE" name="name" placeholder="Escribe tu nombre..." required>
+
+            <label for="lastname">Apellidos:</label>
+            <input type="text" id="lastname" name="lastname" data-id="APELLIDOS" placeholder="Escribe tus apellidos..." required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" data-id="EMAIL" placeholder="escribe tu email..." name="email" required>
+
+            <label for="message">Comentario:</label>
+            <textarea placeholder="Escribe tu comentario..." data-id="COMENTARIO" id="message" rows="6" name="message" required></textarea>
+            <div id="contador">Tienes <span>120 </span>palabras</div>
+            
+            <input type="submit" value="ENVIAR">
+
+         </div>
+
+    </form>
+
+</div>

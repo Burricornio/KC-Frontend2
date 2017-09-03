@@ -1,0 +1,89 @@
+body {
+    background: $color-base;
+    font-family: $main-font-family;
+    font-size: $font-size-base;
+    color: $font-main-color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+em { 
+    font-style: italic;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px;
+    color: $font-secondary-color;
+    font-size: $font-size-large;
+    line-height: 18px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+// Clases generales
+
+.link {
+    text-decoration: none;
+}
+
+.link--text {
+    color: $actions-color;
+}
+
+.text {
+    margin-top: 10px;
+    line-height: 20px;
+} 
+.text--first {
+    margin-top: 20px;
+}
+
+// Formularios
+label {
+        margin: 12px 0 8px 0;
+        display: block;
+    }
+input[type=text], input[type=email] , textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid $color-base;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 12px;
+        &:focus {
+            outline: none;
+            border:1px solid $actions-color;
+            box-shadow: 0 0 10px transparentize($font-secondary-color, .3);
+        }
+}
+input[type=submit] {
+        width: 65%;
+        background-color: $actions-color;
+        color: $color-base;
+        padding: 14px 20px;
+        display: block;
+        margin: 18px auto;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.25sg;
+        &:active {
+            background: $alert-color;
+        }
+        @include if-tablet-portrait {
+            width: 50%;
+        }
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+textarea {
+    resize: none;
+}

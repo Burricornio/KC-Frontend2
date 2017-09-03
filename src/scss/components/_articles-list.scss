@@ -1,0 +1,186 @@
+.main__container {
+    max-width: $web-container-size;
+    margin: 0 auto;
+    overflow: auto;
+    padding-top: 85px;
+    .article {
+        width:  100%;
+        margin: 4px 0 18px 0;
+        border-bottom: 1px solid $border-color;
+        overflow: auto;
+        padding-bottom: 16px;
+        @include if-tablet-landscape {
+            padding-bottom: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include if-mobile-landscape {
+            width: calc(50% - 24px);
+            float: left;
+            margin: 10px;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,.1);
+        }
+        .article__img-container {
+            background-image: url("/img-home/marvel.jpg");
+            width:  100%;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            &.spiderman-article {
+                background-image: url("/img-home/spiderman.jpg");
+                background-position: 50% 100%;
+            }
+            .queens-video {
+                width: 100%;
+                height: 100px;
+                float: left;
+                @include if-tablet-landscape {
+                    width: 200px;
+                    height: 258px;
+                }
+            }
+            &.mirror-article {
+                background-image: url("/img-home/mirror.jpg");
+            }
+            &.caballeros-article {
+                background-image: url("/img-home/caballeros.jpg");
+                background-position: 50% 40%;
+            }
+            &.walking-article {
+                background-image: url("/img-home/walking.jpg");
+                background-position: 50% 60%;
+            }
+            &.foo-article {
+                background-image: url("/img-home/foo.jpg");
+                background-position: 50% 90%;
+            }
+            &.plants-article {
+                background-image: url("/img-home/plants.jpg");
+                background-position: 50% 100%;
+                @include if-desktop {
+                    background-position: 50% 28%;
+                }
+            }
+            &.keep-article {
+                background-image: url("/img-home/keep.jpg");
+                background-position: 50% 73%;
+            }
+            &.skate-article {
+                background-image: url("/img-home/skate.jpg");
+                background-position: 50% 100%;
+            }
+            &.destiny-article {
+                background-image: url("/img-home/destiny.jpg");
+                background-position: 50% 11%;
+            }
+             @include if-desktop {
+                width: 200px;
+                height: 258px;
+                float: left;
+            }
+        }
+        .article__info {
+            padding: 20px;
+            @include if-desktop {
+                width: 248px;
+                float: left;
+            }
+            .article__title {
+                font-size: 20px;
+                line-height: normal;
+                color: $font-main-color;
+                font-family: $title-font-family;
+                font-weight: bold;
+                @include if-mobile-landscape {
+                    min-height: 72px;
+                }
+            }
+            .article__resume {
+                display: block;
+                /* Fallback for non-webkit */
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $font-secondary-color;
+                margin-top: 5px;
+                line-height: normal;
+            }
+            .article__author {
+                margin-top: 10px;
+                width: 100%;
+                height: 40px;
+                .author__photo {
+                    width: 40px;
+                    height: 40px;
+                    float: left;
+                    img {
+                        border-radius: 100%;
+                    }
+                }
+                .thumb-up {
+                    font-size: 20px;
+                    padding-top: 2px;
+                    transition: color ease 0.2s;
+                    &:hover {
+                        color: $actions-color;
+                    }
+                }
+                .like-counter {
+                    text-align: center;
+                    line-height: 24px;
+                    margin-left: 6px;
+                    float: right;
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $border-color;
+                    border-radius: 2px;
+                }
+            }
+            .number-of-comments {
+                line-height: 24px;
+                font-size: 12px;
+                text-align: right;
+                width: 165px;
+                float: right;
+                margin-top: 5px;
+                color: $font-main-color;
+                .comments-length {
+                    text-align: center;
+                    line-height: 24px;
+                    font-size: 14px;
+                    margin-left: 6px;
+                    float: right;
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $border-color;
+                    border-radius: 2px;
+                    color: $font-secondary-color;
+                }
+            }
+        }
+        .author__center-info {
+            float: left;
+            font-size: 12px;
+            padding: 4px 8px;
+            .author__name {
+                line-height: 1.4;
+            }
+            .author__date {
+                margin-top: 1px;
+                color: $font-secondary-color;
+            }
+        }
+        .author__like {
+            padding-top: 8px;
+            color:$font-secondary-color;
+            float: right;
+        }
+    }
+}

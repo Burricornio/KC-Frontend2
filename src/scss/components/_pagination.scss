@@ -1,0 +1,17 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .page-number {
+        margin: 0 14px;
+        background: transparentize($font-secondary-color, .3);
+        padding: 10px;
+    }
+    .material-icons {
+        &:hover {
+            color: $actions-color;
+        }
+    }
+}
+    

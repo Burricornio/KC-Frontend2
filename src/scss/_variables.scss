@@ -1,0 +1,33 @@
+// Web container
+$web-container-size: 1024px;
+
+// Font families
+$main-font-family: 'Roboto', sans-serif;
+$title-font-family: 'Muli', sans-serif;
+
+
+// Font sizes
+$font-size-base: 14px;
+$font-size-small: $font-size-base - 2px;
+$font-size-large: $font-size-base + 5px;
+$font-size-h1: $font-size-base + 16px;
+$font-size-h2: $font-size-base + 6px;
+
+// Base colors
+$color-base: #FFF;
+$actions-color: rgb(2, 184, 117);
+$font-main-color: rgb(0,0,0);
+$font-secondary-color: rgba(0, 0, 0, 0.44);
+$border-color: rgba(0,0,0,.1);
+$alert-color: #771A6D;
+
+// Responsive
+$mobile-portrait-width: 500px;
+$mobile-landscape-width: 767px;
+$tablet-portrait-width: 768px;
+$tablet-landscape-width: 1024px;
+
+// Footer
+$footer-background-color: rgb(41,41,41);
+$footer-font-color: rgb(255,255,255);
+
