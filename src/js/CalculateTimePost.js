@@ -6,14 +6,14 @@ export default class CalculateTimePost {
         // Mostrar tiempo transcurrido
         $('.author__date').each(function(){
 
-        var textDate =  $(this).text();
-        var myDate = new Date(textDate);
-        var now = new Date();
+        let textDate =  $(this).text();
+        let myDate = new Date(textDate);
+        let now = new Date();
 
-        var seconds = Math.floor((now - (myDate))/1000);
-        var minutes = Math.floor(seconds/60);
-        var hours = Math.floor(minutes/60);
-        var days = Math.floor(hours/24);
+        let seconds = Math.floor((now - (myDate))/1000);
+        let minutes = Math.floor(seconds/60);
+        let hours = Math.floor(minutes/60);
+        let days = Math.floor(hours/24);
 
         hours = hours-(days*24);
         minutes = minutes-(days*24*60)-(hours*60);
@@ -21,7 +21,7 @@ export default class CalculateTimePost {
 
             $(this).mouseenter(function(){
 
-                $(this).text(days + "d " + hours + "h " + minutes + "m")
+                $(this).text(`${days}d ${hours}h ${minutes}m`)
 
             }).mouseleave(function(){
 
